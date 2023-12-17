@@ -1,0 +1,17 @@
+package com.kamil.util;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class HibernateUtil {
+	
+	private static SessionFactory sessionFactory = null;
+	private static Session session= null;
+
+	static {
+		sessionFactory = new Configuration().configure().buildSessionFactory();
+		session = sessionFactory.openSession();
+		System.out.println("[chcek in HibernateUtil] -> Session factory has been build: " + sessionFactory );
+	}
+}

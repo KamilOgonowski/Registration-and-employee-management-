@@ -1,0 +1,5 @@
+package com.kamil.util;
+
+public class HibernateUtil {
+
+}

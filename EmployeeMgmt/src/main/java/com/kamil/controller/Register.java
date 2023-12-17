@@ -29,6 +29,8 @@ public class Register extends HttpServlet {
 			admin1.setCountry(country);
 			admin1.setCity(city);
 			admin1.setPassword(password);
+			
+			
 
 		}else {}
 		System.out.println("Password and confrimed password do not match!!! - add logic ");

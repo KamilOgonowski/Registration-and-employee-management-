@@ -1,0 +1,27 @@
+2023-12-17 00:56:49,845 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-12-17 01:00:20,113 [Worker-25: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.kamil:EmployeeMgmt:0.0.1-SNAPSHOT @ C:\Users\ogono\Desktop\programowanie\Project\EmployeeMgmt\pom.xml.
+2023-12-17 01:00:20,819 [Worker-25: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /EmployeeMgmt/src/main/java
+2023-12-17 01:00:20,820 [Worker-25: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /EmployeeMgmt/src/main/resources
+2023-12-17 01:00:20,821 [Worker-25: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /EmployeeMgmt/src/test/java
+2023-12-17 01:00:20,821 [Worker-25: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /EmployeeMgmt/src/test/resources
+2023-12-17 01:00:21,180 [Worker-25: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-12-17 01:00:21,430 [Worker-25: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.kamil:EmployeeMgmt:0.0.1-SNAPSHOT @ C:\Users\ogono\Desktop\programowanie\Project\EmployeeMgmt\pom.xml.
+2023-12-17 01:00:21,817 [Worker-25: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /EmployeeMgmt/src/main/java
+2023-12-17 01:00:21,817 [Worker-25: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /EmployeeMgmt/src/main/resources
+2023-12-17 01:00:21,831 [Worker-25: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /EmployeeMgmt/src/test/java
+2023-12-17 01:00:21,831 [Worker-25: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /EmployeeMgmt/src/test/resources
+2023-12-17 01:00:22,019 [Worker-25: Enabling Maven Dependency Management] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for EmployeeMgmt
+2023-12-17 01:00:22,033 [Worker-25: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2023-12-17 01:00:22,154 [Worker-10: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1250 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-12-17 01:00:22,155 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ogono\Desktop\programowanie\Project\EmployeeMgmt\src\main\resources
+2023-12-17 01:00:22,158 [Worker-10: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1250 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-12-17 01:00:22,159 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ogono\Desktop\programowanie\Project\EmployeeMgmt\src\test\resources
+2023-12-17 01:00:22,160 [Worker-10: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of EmployeeMgmt
+2023-12-17 01:00:22,160 [Worker-10: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for EmployeeMgmt
+2023-12-17 01:00:41,529 [Worker-18: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.kamil:EmployeeMgmt:0.0.1-SNAPSHOT @ C:\Users\ogono\Desktop\programowanie\Project\EmployeeMgmt\pom.xml.
+2023-12-17 01:00:42,007 [Worker-18: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1250 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-12-17 01:00:42,008 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ogono\Desktop\programowanie\Project\EmployeeMgmt\src\main\resources
+2023-12-17 01:00:42,011 [Worker-18: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1250 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-12-17 01:00:42,011 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ogono\Desktop\programowanie\Project\EmployeeMgmt\src\test\resources
+2023-12-17 01:00:42,011 [Worker-18: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of EmployeeMgmt
+2023-12-17 01:00:42,011 [Worker-18: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for EmployeeMgmt

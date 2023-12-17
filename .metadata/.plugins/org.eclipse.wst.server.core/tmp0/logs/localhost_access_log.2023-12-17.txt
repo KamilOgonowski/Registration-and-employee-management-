@@ -1,2 +1,12 @@
 127.0.0.1 - - [17/Dec/2023:00:59:34 +0100] "GET / HTTP/1.1" 404 751
 127.0.0.1 - - [17/Dec/2023:00:59:34 +0100] "GET /EmployeeMgmt/ HTTP/1.1" 200 139
+127.0.0.1 - - [17/Dec/2023:14:03:21 +0100] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [17/Dec/2023:14:03:21 +0100] "GET /EmployeeMgmt/ HTTP/1.1" 304 -
+127.0.0.1 - - [17/Dec/2023:14:05:27 +0100] "GET /EmployeeMgmt/ HTTP/1.1" 200 283
+127.0.0.1 - - [17/Dec/2023:14:05:28 +0100] "GET /EmployeeMgmt/register.html HTTP/1.1" 404 781
+127.0.0.1 - - [17/Dec/2023:14:05:42 +0100] "GET /EmployeeMgmt/login.html HTTP/1.1" 200 447
+127.0.0.1 - - [17/Dec/2023:14:05:44 +0100] "GET /EmployeeMgmt/register.html HTTP/1.1" 404 781
+127.0.0.1 - - [17/Dec/2023:14:06:25 +0100] "GET /EmployeeMgmt/ HTTP/1.1" 304 -
+127.0.0.1 - - [17/Dec/2023:14:06:25 +0100] "GET /EmployeeMgmt/ HTTP/1.1" 304 -
+127.0.0.1 - - [17/Dec/2023:14:06:26 +0100] "GET /EmployeeMgmt/register.html HTTP/1.1" 200 793
+127.0.0.1 - - [17/Dec/2023:14:06:28 +0100] "GET /EmployeeMgmt/login.html HTTP/1.1" 304 -

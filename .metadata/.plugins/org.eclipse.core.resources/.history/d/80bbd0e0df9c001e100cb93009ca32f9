@@ -1,0 +1,46 @@
+package com.StudentPortal.controlller;
+
+import java.io.IOException;
+import java.net.URLEncoder;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.StudentPortal.model.Model;
+
+@WebServlet("/login")
+public class Login extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Cotrol is in login controller");
+		String userName = request.getParameter("uname");
+		String password = request.getParameter("password");
+		
+		Model model = new Model();
+		model.setUserName(userName);
+		model.setPassword(password);
+		
+		model.login();
+		String dbUserName=model.getUserName();
+		String dbPassword=model.getPassword();
+//		
+		String encodedUserName = URLEncoder.encode(dbUserName, "UTF-8");
+		Cookie cookieUserName = new Cookie("UserName", encodedUserName);
+		response.addCookie(cookieUserName);
+		
+		if(userName.equals(dbUserName)&&password.equals(dbPassword)) {
+			System.out.println("Loging successful");
+			response.sendRedirect("/MVCProject/loginsuccess.jsp");
+	
+		}else {
+			System.out.println("Loging Unsuccessful");
+			response.sendRedirect("/MVCProject/loginfail.jsp");
+		}
+	}
+
+}

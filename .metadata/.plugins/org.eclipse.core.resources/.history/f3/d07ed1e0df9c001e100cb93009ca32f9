@@ -1,0 +1,161 @@
+package com.StudentPortal.model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Model {
+
+	private String userName;
+	private String city;
+	private String country;
+	private String password;
+
+	private String sql = null;
+	private Connection connect;
+	private PreparedStatement pstmnt;
+	private int row;
+
+	private ResultSet rs;
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getContry() {
+		return country;
+	}
+
+	public void setContry(String contry) {
+		this.country = contry;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@Override
+	public String toString() {
+		return "Model [userName=" + userName + ", city=" + city + ", contry=" + country + ", password=" + password
+				+ "]";
+	}
+
+	public int register() {
+		try {
+			System.out.println("Control in register");
+			connect = JdbcUtility.getDBConnection();
+			sql = "INSERT INTO studentportal(id, username, city, country, password) VALUES(?,?,?,?,?)";
+			if (connect != null) {
+				pstmnt = connect.prepareStatement(sql);
+				if (pstmnt != null) {
+					pstmnt.setInt(1, 1);
+					pstmnt.setString(2, userName);
+					pstmnt.setString(3, city);
+					pstmnt.setString(4, country);
+					pstmnt.setString(5, password);
+					row = pstmnt.executeUpdate();
+					System.out.println(row + " checking row in jdbc model");
+
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				JdbcUtility.closeResources(connect, pstmnt);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return row;
+	}
+
+	public void login() {
+		System.out.println("Control in login method of Model class");
+		String sql = "SELECT username, password FROM studentportal where username=?";
+
+		try {
+			connect = JdbcUtility.getDBConnection();
+			if (connect != null) {
+				pstmnt = connect.prepareStatement(sql);
+				if (pstmnt != null) {
+					System.out.println("Control in prepared statement of login method (Modul class)");
+					pstmnt.setString(1, userName);
+					rs = pstmnt.executeQuery();
+					while (rs.next()) {
+						userName = rs.getString("username"); // as an attribute we can use either column number or name
+																// of a column
+						password = rs.getString("password");
+					}
+					System.out.println("Done with login verification [Model class -> login method]");
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				JdbcUtility.closeResources(connect, pstmnt);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public int buyCourse(String user, String course) {
+		System.out.println("Control in login method of Model class");
+		String sql = "INSERT INTO courses_bought (username, course) VALUES(?,?)";
+
+		try {
+			connect = JdbcUtility.getDBConnection();
+			if (connect != null) {
+				pstmnt = connect.prepareStatement(sql);
+				pstmnt.setString(1, user);
+				pstmnt.setString(2, course);
+			}
+				
+			
+			if (pstmnt != null) {
+				row = pstmnt.executeUpdate();
+				if (row != 0) {
+					System.out.println("Check your DB - courses_bought table");
+				}
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				JdbcUtility.closeResources(connect, pstmnt);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return row;
+
+	}
+
+}

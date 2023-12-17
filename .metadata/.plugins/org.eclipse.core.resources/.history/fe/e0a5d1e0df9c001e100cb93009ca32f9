@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>New Course has been bought</title>
+</head>
+<body>
+	<h2>Congratulation you have just bought a new course!</h2>
+	<a href="loginsuccess.jsp">Click here to go back to user dashboard!</a>
+
+</body>
+</html>

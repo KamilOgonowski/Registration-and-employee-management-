@@ -15,16 +15,11 @@ public class RegisterDAO {
 	
 	
 	public void registerUser(RegisterUserModel admin) {
-		System.out.println("Czy cos sie tu dzieje wogole REGHISTER DAO.java");
 		try {
 			session = HibernateUtil.getSession();
-			System.out.println((session==null)?"Session == null123":"Session different than null123");
 			if(session!=null) {
-				System.out.println("[chcek in RegisterDAO] -> session has been created");
-				
 				transaction = session.beginTransaction();
 			if(transaction!=null) {
-				
 				session.save(admin);
 				flag=true;
 			}
@@ -36,10 +31,7 @@ public class RegisterDAO {
 		}finally {
 			if(flag==true) {
 				transaction.commit();
-				System.out.println("[chcek in RegisterDAO] -> transaction has been commited - new entry in DB should be avaiaible");
 			}else {
-				System.out.println("[chcek in RegisterDAO] -> transaction has not been commited -probably is equal to null");
-				System.out.println((session==null)?"session == null!!":"Session not null");
 				transaction.rollback();
 		
 			}

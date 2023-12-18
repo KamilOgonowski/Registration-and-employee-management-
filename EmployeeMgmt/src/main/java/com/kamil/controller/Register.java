@@ -36,17 +36,13 @@ public class Register extends HttpServlet {
 			RegisterDAO admin = new RegisterDAO();
 			admin.registerUser(admin1);
 			
-//			PrintWriter out = response.getWriter();
-//			out.print(admin1);
-//			
-			
-			
+			PrintWriter out = response.getWriter();
+			out.print(admin1);
 
-		}else {}
+		}else {
 		System.out.println("Password and confrimed password do not match!!! - add logic ");
-		
-		
-		
+		}
+
 	}
 
 }

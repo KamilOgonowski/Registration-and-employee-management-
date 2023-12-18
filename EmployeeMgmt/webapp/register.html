@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Registration</title>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            color: red;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        table td {
+            padding: 8px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            padding: 6px;
+            width: 200px;
+        }
+    </style>
 </head>
-<body style="align-content: center">
+<body>
 
-<h2>Student Registration Failed!</h2>
-<h2>Password and Confirm password not matching!</h2>
-<form action="./Register">
-
-<table>
-<tr>
-<td> User Name </td>
-<td> <input type="text" name="uname"> </td>
-</tr>
-
-<tr>
-<td>  City </td>
-<td> <input type="text" name="city"> </td>
-</tr>
-<tr>
-<td>  Country </td>
-<td> <input type="text" name="country"> </td>
-</tr>
-
-<tr>
-<td> Password </td>
-<td> <input type="password" name="password"> </td>
-</tr>
-
-<tr>
-<td> Confirm Password </td>
-<td> <input type="password" name="cpassword"> </td>
-</tr>
-
-<td> <input type="submit" value="Register"> </td>
-</tr>
-</table>
-
-
-</form>
-
+    <h2>Admin Registration Panel</h2>
+    <h2>Please provide details to create an account for you!</h2>
+    <form action="./Register" method="GET">
+        <table>
+            <tr>
+                <td>User Name</td>
+                <td><input type="text" name="uname"></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" name="city"></td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td><input type="text" name="country"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="password" name="cpassword"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Register"></td>
+            </tr>
+        </table>
+    </form>
 
 </body>
 </html>

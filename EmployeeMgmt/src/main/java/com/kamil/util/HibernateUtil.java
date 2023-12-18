@@ -10,15 +10,23 @@ public class HibernateUtil {
 	private static Session session= null;
 
 	static {
-		sessionFactory = new Configuration().configure().buildSessionFactory();
-		System.out.println("[chcek in HibernateUtil] -> Session factory has been build: " + sessionFactory );
+
+		Configuration config = new Configuration();
+		config.configure();
+		sessionFactory = config.buildSessionFactory();
+		System.out.println("SessionFactory zostalo utworzone");
+//		
+//		sessionFactory = new Configuration().configure().buildSessionFactory();
 	}
 	
 	public static Session getSession() {
-		if (session!=null) {
+		System.out.println("Pokaz czy jest sesje w getSession: " + session);
+		if (session==null ||!session.isOpen()) {
 			session = sessionFactory.openSession(); /*To avoid two Session objects opened at once -> issue with double/miltiple cache*/
-			System.out.println("[chcek in HibernateUtil] -> Session has been opened");
+			System.out.println("[chcek in HibernateUtil] -> Session has been opened!");
 		}
+		System.out.println(session==null);
+		System.out.println("Nie ma sesji: "+ session);
 		return session;
 	}
 	

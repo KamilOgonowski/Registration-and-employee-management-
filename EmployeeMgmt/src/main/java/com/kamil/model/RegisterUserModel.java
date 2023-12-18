@@ -1,16 +1,29 @@
 package com.kamil.model;
 
-public class RegisterUserModel {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
+@Entity
+@Table(name="Admin")
+public class RegisterUserModel {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer id;
 	private String userName;
 	private String city;
 	private String country;
 	private String password;
-	@Override
-	public String toString() {
-		return "RegisterUserModel [userName=" + userName + ", city=" + city + ", country=" + country + ", password="
-				+ password + "]";
+	
+	
+	
+	public RegisterUserModel() {
+		System.out.println("No-args Constructor required for internal use of hibernate");
 	}
+
 	public String getUserName() {
 		return userName;
 	}
@@ -34,6 +47,15 @@ public class RegisterUserModel {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public Integer getId() {
+		return id;
+	}
+
+	@Override
+	public String toString() {
+		return "RegisterUserModel [id=" + id + ", userName=" + userName + ", city=" + city + ", country=" + country
+				+ ", password=" + password + "]";
 	}
 	
 

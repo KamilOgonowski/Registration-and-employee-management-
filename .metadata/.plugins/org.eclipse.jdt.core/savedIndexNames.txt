@@ -12,8 +12,11 @@ INDEX VERSION 1.134+C:\Users\ogono\Desktop\programowanie\Project\.metadata\.plug
 2677502689.index
 1475172797.index
 335453197.index
+970430542.index
 3869484080.index
+1163076397.index
 512775774.index
+1883927390.index
 588834976.index
 2525209878.index
 698531591.index

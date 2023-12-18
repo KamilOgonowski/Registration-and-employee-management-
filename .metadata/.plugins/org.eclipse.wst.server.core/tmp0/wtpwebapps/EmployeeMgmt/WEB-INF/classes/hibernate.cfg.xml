@@ -22,9 +22,9 @@
   <property name="hibernate.format_sql">true</property>
   
   <!--  Inform HIBERNATE to create/alter/drop the table  -->
-<property name="hibernate.hbm2ddl.auto">update</property>
+<property name="hibernate.hbm2ddl.auto">create</property>
 
-<mapping class="com.kamil.entity.Student2"/>   <!--  commented to try another approach with using of addAnnotatedclass in new Configuration() -->
+<mapping class="com.kamil.model.RegisterUserModel"/>   <!--  commented to try another approach with using of addAnnotatedclass in new Configuration() -->
         
         
    </session-factory>     
